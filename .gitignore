@@ -1,0 +1,11 @@
+*.pyc
+*.sqlite3
+_psql
+*.log
+*.env
+.DS_Store
+webauthn/**/css/*.css
+webauthn/**/css/*.css.map
+webauthn/**/styles/*.css
+keys/
+*.pem

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Keys {% endblock %}</h1>
+    <div style="width: 50%; margin: auto">
+        {% for key in keys %}
+            {% if loop.index % 2 == 0 %}
+                {% set bg_color = '#e6f9ff' %}
+            {% else %}
+                {% set bg_color = '#eee' %}
+            {% endif %}
+
+            {% if error %}
+                <p>{{ error }}</p>
+            {% endif %}     
+            <div style="padding: 10px; background-color: {{ bg_color }}; margin: 20px">
+                <p>#{{ loop.index }}</p>
+                <p style="font-size: 24px">Domain - {{ key[1] }}</p>
+                <p style="font-size: 24px">Key - {{ key[0] }}</p>
+                <p style="font-size: 24px">Status - {{ key[2] }}</p>
+                <form action="" method="post">
+                    <input type="hidden" id="domain" name="domain" value="{{
+                        key[1] }}">
+                    <input type="hidden" id="keyId" name="keyId" value="{{
+                        key[0] }}">
+                    {% if key[2] %}
+                    <input class="btn btn-default" type="submit" value="Disable Key">
+                    {% endif %}
+                  </form>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

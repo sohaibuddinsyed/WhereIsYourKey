@@ -1,0 +1,31 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Django = "*"
+gunicorn = "*"
+psycopg2 = "*"
+redis = "*"
+hiredis = "*"
+webauthn = "*"
+libsass = "*"
+django-compressor = "*"
+django-sass-processor = "*"
+requests = "*"
+pycryptodome = "*"
+rsa = "*"
+
+[dev-packages]
+black = "*"
+mypy = "*"
+flake8 = "*"
+flake8-quotes = "*"
+types-redis = "*"
+
+[requires]
+python_version = "3.9.7"
+
+[pipenv]
+allow_prereleases = true

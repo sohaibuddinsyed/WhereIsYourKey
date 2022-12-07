@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "5156b8f8-fe66-4542-87e2-605121c7a04e",
+		"name": "key_manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4461188"
+	},
+	"item": [
+		{
+			"name": "alive",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/alive",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"alive"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/alive",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"alive"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{ \"status\": true}"
+				}
+			]
+		},
+		{
+			"name": "registerKey",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/registerKey",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"registerKey"
+					],
+					"query": [
+						{
+							"key": "PublicKey",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "registerKey",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserID\": \"b83b3c490f1b0b232eda15026ee4458139f114ebfbfdf7dbca02912e0308d604\",\r\n    \"keyID\": \"SQOVIGUX8O0YmWXtl2AMb3A9dBmt4cjh3wsMPvMWg6c=\",\r\n    \"domainName\": \"localhost\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/registerKey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"registerKey"
+							],
+							"query": [
+								{
+									"key": "PublicKey",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"BackupPublicKeyUser\": \"AAAAC3NzaC1lZDI1NTE5AAAAIAcENvNUnlZNrF6q2eLSZ8ihuBUYWWBEjDinw4Huyhsf\",\n    \"BackupPublicKeyServer\": \"AAAAB3NzaC1yc2EAAAADAQABAAABgQDDQF2m1vQWKdCV4FENrGxtIH/tvQ9rKZ0FhdbShw/JCDLQE/dTZRjVbiEw7/pjs5vvJ+8hzu/6+FRncAeafwWhlG/uFEGbhOy9NNwGJzm4Y8vqMEXqbN21D4EbWAX+NxwxaAcYsV1DoyQL1/bO3Wa1uE0GdNnpUjN3SfVXJZmhKtAaTdiyzWVKoXuVsJC2hy49JKfzYXTw9LxE8UuKq5l/sTpmWbftj5VjVHZFKL3c39n6Yqj2fyzjPjdA8Japzes7zUqN2fCTyGpIIMYgflF7G2FljMs4dGUugz6nACOcRSYw0PJuPwVezzRrw0ySxhgHrZxBXUaqQPOwy0dF1kv6H4gp4Nvf9ezYUgrb3yfkBLrGVBpVn334kmhFq7M96NDvwRBqPjsFrU/yOWinaqE8JZrEHg43ctsv4H7IAVWVTqVh5pEhVNcLLFsq1eB7ELd+eOUbeRfLVOoyT/6fQkpRHztmZkrUIuKVTZT0OrNfLKhoW4irggLlrE6qJHcO/gk=\"\n}   "
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://3df83d0b-e2d8-43ec-ad6e-cf24bb431fae.mock.pstmn.io"
+		}
+	]
+}
