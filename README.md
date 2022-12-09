@@ -38,3 +38,16 @@ and KMS server will be avilable at http://localhost:5000
 3. After registration login with the credentials from previous step.
 4. We have to manually add this Id and backup URL to chrome localstorage since this value must be passed along with registration request and in real world scenario they must be supplied by the autenticator.
 5. 
+
+## Sample Output
+### Webauthn storage displaying the key id and the KMS URL
+![localstorage](https://user-images.githubusercontent.com/49821723/206775949-2a6fa737-6c96-49ac-b708-1ca5564e0fae.png)
+
+### Registration time logged without the KMS
+![registration-time-kms](https://user-images.githubusercontent.com/49821723/206776062-bba4425c-2d64-448e-8533-9ca766982580.png)
+
+### Registration time logged with the KMS
+![registration-time-wkms](https://user-images.githubusercontent.com/49821723/206776166-bc4ddce1-66f6-4eca-b231-68df70051510.png)
+
+
+
