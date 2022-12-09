@@ -37,7 +37,7 @@ and KMS server will be avilable at http://localhost:5000
 2. Register with your credentials and have a unique ID that will be used across different websites, we suggest user to make it a sha256 hash of their private key, these ID will be used by KMS to uniquely identify user keys across different website.
 3. After registration login with the credentials from previous step.
 4. We have to manually add this Id and backup URL to chrome localstorage since this value must be passed along with registration request and in real world scenario they must be supplied by the autenticator.
-5. 
+5. Once done, whenever the user revokes the key from KMS, it will be deleted from the simulated relying party.
 
 ## Sample Output
 ### Webauthn storage displaying the key id and the KMS URL
