@@ -37,7 +37,15 @@ and KMS server will be avilable at http://localhost:5000
 2. Register with your credentials and have a unique ID that will be used across different websites, we suggest user to make it a sha256 hash of their private key, these ID will be used by KMS to uniquely identify user keys across different website.
 3. After registration login with the credentials from previous step.
 4. We have to manually add this Id and backup URL to chrome localstorage since this value must be passed along with registration request and in real world scenario they must be supplied by the autenticator.
-5. Once done, whenever the user revokes the key from KMS, it will be deleted from the simulated relying party.
+5. Next, visit the webauthn website at https://localhost and register the key.
+6. On successful registration, the KMS and webauthn website exchange backup public key and keyid respectively.
+7. In order to revoke it, login back to KMS and click 'Revoke'.
+8 Try signing into the webauthn website to verify.
+
+### For account recovery
+1. Make sure that key is first revoked through the above steps.
+2. In order to recover the account, use the backup public key to login with webauthn website. 
+3. Register a new key to recover.
 
 ## Sample Output
 ### Webauthn storage displaying the key id and the KMS URL
